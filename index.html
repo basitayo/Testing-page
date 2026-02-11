@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <header class="navbar">
+
+        <section class="top-nav">
+
+            <div class="logo">
+                <img src="logo1.png" alt="company logo">
+            </div>
+            
+            <section class="nav-links">
+
+                <button class="icon-btn mobile-toggle"><span class="material-icons-round">menu</span></button>
+                <nav>
+                    <a href="#">Dashboard</a>
+                    <a href="#">Home Page</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Create Project</a>
+                    <a href="#">Services</a>
+                    <a href="#">Followed Freelancers</a>
+                    <a href="#">Calender</a>
+                    <a href="#">Reviews</a>
+                </nav>
+
+                <!-- SETTINGS -->
+                <div class="dropdown">
+                    <button class="icon-btn dropdown-toggle"><span class="material-icons-round">settings</span></button>
+                    <div class="dropdown-menu">
+                        <a href="#">Dispute</a>
+                        <a href="#">Verify Identity</a>
+                        <a href="#">Plan Details</a>
+                        <hr>
+                        <a href="#" class="logout">Logout</a>
+                    </div>
+                </div>
+
+                <!-- NOTIFICATION -->
+                <div class="dropdown">
+                    <button class="icon-btn dropdown-toggle"><span class="material-icons-round">notifications</span></button>
+                    <div class="dropdown-menu">
+                        <a href="#">New proposal received</a>
+                        <a href="#">Project approved</a>
+                        <a href="#">Payment received</a>
+                        <hr>
+                        <a href="#">View all notifications</a>
+                    </div>
+                </div>
+
+                <!-- PROFILE -->
+                <div class="dropdown">
+                    <button class="icon-btn dropdown-toggle"><span class="material-icons-round">account_circle</span></button>
+                    <div class="dropdown-menu">
+                        <a href="#">My Profile</a>
+                        <a href="#">Dashboard</a>
+                        <a href="#">Settings</a>
+                        <hr>
+                        <a href="#" class="logout">Logout</a>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <section class="welcome-title">
+            <h1>Welcome in, Alex</h1>
+        </section>
+    </header>
+
+    <main class="main">
+
+        <section class="progress-bar">
+
+            <section class="progress-percent">
+
+                <div class="bar bar-1">
+                    <p>Posted</p>
+                    <button class="btn-1">12</button>
+                </div>
+
+                <div class="bar bar-2">
+                    <p>Featured</p>
+                    <button class="btn-2">4</button>
+                </div>
+
+                <div class="bar bar-3">
+                    <p>Ongoing</p>
+                    <button class="btn-3">6</button>
+                </div>
+
+                <div class="bar bar-4">
+                    <p>Completed</p>
+                    <button class="btn-4">18</button>
+                </div>
+
+            </section>
+
+            <section class="progress-totals">
+
+                <div class="num num-1">
+                    <h2><small><span class="material-icons-round">find_in_page</span></small>78</h2>
+                    <p>Profile Views</p>
+                </div>
+
+                <div class="num num-2">
+                    <h2><small><span class="material-icons-round">assignment_return</span></small>8</h2>
+                    <p>Proposals</p>
+                </div>
+
+                <div class="num num-3">
+                    <h2><small><span class="material-icons-outlined">card_membership</span></small>3</h2>
+                    <p>Current Plan</p>
+                </div>
+
+            </section>
+
+        </section>
+
+        <section class="profile-grid">
+
+            <div class="card card1">
+                <div></div>
+                <div class="blur-buttom">
+                    <div class="c-name">
+                        <h3>Lora Piterson</h3>
+                        <p>UX/UI Designer</p>
+                    </div>
+                    <button>Edit Profile</button>
+                </div>
+            </div>
+
+            <div class="card card2">
+                <div class="cc-prrogr">
+                    <div class="c-progress">
+                        <h3>Recent Proposals</h3>
+                        <button class="open-page-button"><span class="material-icons-round">arrow_outward</span></button>
+                    </div>
+                    <div class="proppossals">
+                        <p>Website redesign</p>
+                        <small>2 hours ago</small>
+                    </div>
+                    <div class="proppossals">
+                        <p>Monile app UI</p>
+                        <small>Yesterday</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card3">
+                <div class="cc-traaackk">
+                    <div class="c-ttracker">
+                        <h3>Project Status</h3>
+                        <button class="open-page-button"><span class="material-icons-round">arrow_outward</span></button>
+                    </div>
+                    <div class="project-graap">
+                        <nav>
+                            <a href="#">Ongoing: 6</a>
+                            <a href="#">Completed: 18</a>
+                            <a href="#">Featured: 4</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card4">
+                <div class="cc-ongiiing">
+                    <div class="c-ongoing">
+                        <h3>Ongoing Projects</h3>
+                        <p>18%</p>
+                    </div>
+                    <div class="completion-percent">
+                        <div class="obar obar-1">
+                            <p>30%</p>
+                            <button class="btn-1">Task</button>
+                        </div>
+
+                        <div class="obar obar-2">
+                            <p>25%</p>
+                            <button class="btn-1">Task</button>
+                        </div>
+
+                        <div class="obar obar-3">
+                            <p>0%</p>
+                            <button class="btn-1">Task</button>
+                        </div>
+                    </div>
+
+                    <div class="ongoing-ttr">
+                        <div class="ongoing-tass">
+                            <h3>Ongoing Task</h3>
+                            <p>2/8</p>
+                        </div>
+                        
+                        <div class="ongoing-list">
+                            <div class="ong-info">
+                                <button><span class="material-icons-round">laptop</span></button>
+                                <div class="ong-text">
+                                    <p>
+                                        interview <br>
+                                        Sep 13, 08:30
+                                    </p>
+                                </div>
+                            </div>
+                            <input type="checkbox"  id="checkbox">
+                        </div>
+
+                        <div class="ongoing-list">
+                            <div class="ong-info">
+                                <button><span class="material-icons-round">laptop</span></button>
+                                <div class="ong-text">
+                                    <p>
+                                        interview <br>
+                                        Sep 13, 08:30
+                                    </p>
+                                </div>
+                            </div>
+                            <input type="checkbox"  id="checkbox">
+                        </div>
+
+                        <div class="ongoing-list">
+                            <div class="ong-info">
+                                <button><span class="material-icons-round">laptop</span></button>
+                                <div class="ong-text">
+                                    <p>
+                                        interview <br>
+                                        Sep 13, 08:30
+                                    </p>
+                                </div>
+                            </div>
+                            <input type="checkbox"  id="checkbox">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card5">
+                <div class="cc-pensiion">
+                    <div class="c-pension">
+                        <h3>Fund Deposit & Invoice</h3>
+                        <p>Wallet Balance</p>
+                    </div>
+                    <button>$1,200</button>
+                </div>
+            </div>
+
+            <div class="card card6">
+                <div class="cc-plandet">
+                    <div class="c-plandet">
+                        <h3>Current Plan Detail</h3>
+                        <p>Pro Plan</p>
+                    </div>
+                    <button>Upgrade</button>
+                </div>
+                <div class="cuuurrr">
+                    <h2>Premium</h2>
+                    <p>Active</p>
+                    
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+    </main>
+
+
+
+    <script>
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const btn = dropdown.querySelector('.dropdown-toggle');
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            // close others
+            dropdowns.forEach(d => {
+                if(d !== dropdown){
+                    d.classList.remove('active');
+                }
+            });
+
+            dropdown.classList.toggle('active');
+        });
+    });
+
+    // click outside closes all
+    document.addEventListener('click', () => {
+        dropdowns.forEach(d => d.classList.remove('active'));
+    });
+    </script>
+    <script>
+/* NAV LINK ACTIVE STATE */
+const navLinks = document.querySelectorAll('.nav-links nav a');
+
+navLinks.forEach(link=>{
+    link.addEventListener('click', ()=>{
+        navLinks.forEach(l=>l.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+/* ICON BUTTON ACTIVE STATE */
+const iconBtns = document.querySelectorAll('.icon-btn');
+
+iconBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+        iconBtns.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+    });
+});
+
+/* OPEN PAGE BUTTON ACTIVE STATE */
+const openBtns = document.querySelectorAll('.open-page-button');
+
+openBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+        openBtns.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+    });
+});
+</script>
+
+<script>
+/* MOBILE NAV TOGGLE */
+const mobileToggle = document.querySelector('.mobile-toggle');
+const navMenu = document.querySelector('.nav-links nav');
+
+if(mobileToggle){
+    mobileToggle.addEventListener('click', ()=>{
+        navMenu.classList.toggle('show');
+    });
+}
+
+/* Close menu when link clicked */
+const mobileLinks = document.querySelectorAll('.nav-links nav a');
+mobileLinks.forEach(link=>{
+    link.addEventListener('click', ()=>{
+        navMenu.classList.remove('show');
+    });
+});
+</script>
+
+
+</body>
+</html>
