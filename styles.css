@@ -188,6 +188,8 @@ h3{
     background-image: url('images/pics.jpg');
     background-size: cover;
     overflow: hidden;
+    border-left: 4px solid #cd7f32;
+    border-right: 4px solid #cd7f32;
 }
 
 
@@ -284,6 +286,8 @@ h3{
     grid-area: 1 / 3 / 3 / 4; 
     background-color: #ffffff;
     border-radius: 30px;
+    overflow-y: auto;       /* Vertical scroll when content overflows */
+    overflow-x: hidden;
 }
 .cc-traaackk{
     padding: 16px;
@@ -415,7 +419,7 @@ h3{
     grid-area: 3 / 2 / 5 / 4; 
     background-color: #ffffff;
     border-radius: 30px;
-    display: flex;
+    /* display: flex; */
     overflow: hidden;
 }
 
@@ -637,6 +641,10 @@ h3{
     transform: scale(0.95);
 }
 
+.icon-btn.mobile-toggle{
+    display: none;
+}
+
 
 /* ========================= */
 /* RESPONSIVE SYSTEM */
@@ -668,12 +676,39 @@ h3{
     }
 
     /* Grid remap */
-    .card1{ grid-area:auto; }
-    .card2{ grid-area:auto; }
-    .card3{ grid-area:auto; }
-    .card4{ grid-area:auto; }
-    .card5{ grid-area:auto; }
-    .card6{ grid-area:auto; }
+    .card1{ 
+        grid-area:auto; 
+    }
+    .card2{ 
+        grid-area:auto; 
+    }
+    .card3{ 
+        grid-area:auto; 
+    }
+    .accordion{
+        max-width: 100px;
+    }
+    .card4{ 
+        grid-area:auto; 
+    }
+    .card5{ 
+        grid-area:auto; 
+    }
+    .card6{ 
+        grid-area:auto; 
+        margin-left: 0;
+    }
+
+
+    .stats-card{
+        min-width: 150px;
+        max-height: 400px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        align-items: flex-end;
+    }
 
 }
 
@@ -752,6 +787,45 @@ h3{
         min-height: 180px;
     }
 
+    .card1{
+        height: 400px;
+    }
+
+    .accordion{
+        flex: 1;
+        min-width: 650px;
+        min-height: 200px;
+    }
+
+    .meetings-card{
+        max-width: 600px;
+    }
+
+    .card6{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .stats-card{
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .divider {
+        min-width: 80%;
+        max-height: 1px;
+        background: #526791;
+    }
+
+    .icon-btn.mobile-toggle{
+    display: flex;
+}
+    
 }
 
 
@@ -820,15 +894,53 @@ h3{
     }
 
     /* Grid remap */
-    .card1 { grid-area: auto; }
-    .card2 { grid-area: auto; }
-    .card3 { grid-area: auto; }
-    .card4 { grid-area: auto; }
-    .card5 { grid-area: auto; }
-    .card6 { grid-area: auto; }
+    .card1 { 
+        grid-area: auto; 
+    }
+    .card2 { 
+        grid-area: auto; 
+    }
+    .card3 { 
+        grid-area: auto; 
+    }
+
+    .accordion{
+        min-width: 350px;
+    }
+
+    .card4 { 
+        grid-area: auto; 
+    }
+    .card5 { 
+        grid-area: auto; 
+    }
+    .card6 { 
+        grid-area: auto; 
+
+    }
+
+    .stats-card{
+        max-width: 370px;
+        max-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .divider {
+        min-width: 80%;
+        min-height: 1px;
+        background: #526791;
+    }
 
     .card4{
-        min-height: 500px; /* tall card still tall but natural */
+        min-height: 400px; /* tall card still tall but natural */
+    }
+    .meetings-card{
+        min-width: 350px;
     }
 }
 
@@ -913,10 +1025,26 @@ h3{
         min-height:auto;
     }
 
+    .card1{
+        min-height: 300px;
+    }
+
+    .accordion{
+        min-width: 500px;
+        /* min-height: 200px; */
+    }
+
+    .card3{
+        max-width: 558px;
+    }
+
     .card4{
         min-height:auto;
     }
 
+    .card6{
+        min-height: 400px;
+    }
     /* TEXT SCALE */
     .num h2{
         font-size:2rem;
@@ -944,3 +1072,282 @@ h3{
         gap:10px;
     }
 }
+
+/* Card container */
+.accordion {
+  width: 260px;
+  height: 125px;
+  border-radius: 12px;
+  overflow-y: auto;
+  overflow: hidden;
+  background: #f9fafb;
+  box-shadow: 0 6px 15px rgba(0,0,0,.12);
+}
+
+/* Each accordion row */
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* Hide radios */
+.accordion-item input {
+  display: none;
+}
+
+/* Header */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  cursor: pointer;
+  background: white;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Avatar */
+.left img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Text */
+.name {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.email {
+  font-size: 10px;
+  margin: 0;
+  color: #6b7280;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 12px;
+  transition: transform 0.25s ease;
+}
+
+/* Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  font-size: 11px;
+  line-height: 1.3;
+  color: #374151;
+  background: #f9fafb;
+  transition: max-height .3s ease, padding .3s ease;
+}
+
+/* Open state */
+.accordion-item input:checked + .accordion-header + .accordion-content {
+  max-height: 60px;          /* fits inside 125px card */
+  padding: 6px 10px 8px;
+}
+
+/* Rotate arrow */
+.accordion-item input:checked + .accordion-header .arrow {
+  transform: rotate(90deg);
+}
+
+.accordion {
+  scrollbar-width: thin;
+  scrollbar-color: #31425f transparent;
+}
+
+/* Chrome, Edge, Safari */
+.accordion::-webkit-scrollbar {
+  width: 6px;
+}
+
+.accordion::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.accordion::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #c7d2fe, #818cf8);
+  border-radius: 10px;
+}
+
+.accordion::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a5b4fc, #6366f1);
+}
+
+/* Card */
+.stats-card {
+  width: 600px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: #ffffff;
+  border-radius: 14px;
+  /* box-shadow: 0 10px 24px rgba(0,0,0,0.08); */
+}
+
+/* Divider */
+.divider {
+  width: 1px;
+  height: 80%;
+  background: #e5e7eb;
+}
+
+/* Stat blocks */
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Titles */
+.stat-title {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Values */
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  padding: 6px 12px;
+  font-size: 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .25s ease;
+}
+
+/* Primary */
+.primary {
+  background: linear-gradient(135deg, #6366f1, #818cf8);
+  color: white;
+}
+
+/* Soft */
+.soft {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+/* Warning */
+.warning {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+/* Actions group */
+.actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+
+.meetings-card {
+  width: 330px;
+  height: 220px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.meeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.time {
+  min-width: 48px;
+  font-weight: 600;
+  color: #6366f1;
+}
+
+.info {
+  flex: 1;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.desc {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.meeting img,
+.group {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.group {
+  background: #e0e7ff;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Scrollbar */
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+.list::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 6px;
+}
+
+.llinkkks{
+    display: flex;
+    gap: 4px;
+}
+
