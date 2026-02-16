@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
@@ -38,7 +38,7 @@
                     <a href="#">Calender</a>
                     <a href="#">Reviews</a>
                 </nav>
-
+                <div class="llinkkks">
                 <!-- SETTINGS -->
                 <div class="dropdown">
                     <button class="icon-btn dropdown-toggle"><span class="material-icons-round">settings</span></button>
@@ -74,7 +74,7 @@
                         <a href="#" class="logout">Logout</a>
                     </div>
                 </div>
-
+                </div>
             </section>
         </section>
 
@@ -148,17 +148,14 @@
             <div class="card card2">
                 <div class="cc-prrogr">
                     <div class="c-progress">
-                        <h3>Recent Proposals</h3>
+                        <h3>Chart</h3>
                         <button class="open-page-button"><span class="material-icons-round">arrow_outward</span></button>
                     </div>
                     <div class="proppossals">
-                        <p>Website redesign</p>
+                        <p>Current Chart</p>
                         <small>2 hours ago</small>
                     </div>
-                    <div class="proppossals">
-                        <p>Monile app UI</p>
-                        <small>Yesterday</small>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -168,13 +165,66 @@
                         <h3>Project Status</h3>
                         <button class="open-page-button"><span class="material-icons-round">arrow_outward</span></button>
                     </div>
-                    <div class="project-graap">
-                        <nav>
-                            <a href="#">Ongoing: 6</a>
-                            <a href="#">Completed: 18</a>
-                            <a href="#">Featured: 4</a>
-                        </nav>
+
+                        <div class="accordion">
+
+                <!-- Item 1 -->
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc1" checked>
+                    <label for="acc1" class="accordion-header">
+                    <div class="left">
+                        <img src="images/girl-1.jpeg">
+                        <div>
+                        <p class="name">Richard Payne</p>
+                        <p class="email">Graphics Designer</p>
+                        </div>
                     </div>
+                    <span class="arrow">❯</span>
+                    </label>
+                    <div class="accordion-content">
+                    Richard Payne has a proposal
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="accordion-item">
+                    <input type="checkbox" id="acc1" checked>
+                    <label for="acc2" class="accordion-header">
+                    <div class="left">
+                        <img src="images/boy-1.jpg">
+                        <div>
+                        <p class="name">Jordan Stevenson</p>
+                        <p class="email">UI/UX Designer</p>
+                        </div>
+                    </div>
+                    <span class="arrow">❯</span>
+                    </label>
+                    <div class="accordion-content">
+                    Jordan Stevenson has a proposal
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <input type="checkbox" id="acc1" checked>
+                        <label for="acc3" class="accordion-header">
+                        <div class="left">
+                            <img src="images/boy-1.jpg">
+                            <div>
+                            <p class="name">Nicholas Tanner</p>
+                            <p class="email">Graphics Designer</p>
+                            </div>
+                        </div>
+                        <span class="arrow">❯</span>
+                        </label>
+                        <div class="accordion-content">
+                        Nicholas Tanner has a proposal
+                        </div>
+                    </div>
+
+                        </div>
+
+                    
                 </div>
             </div>
 
@@ -202,50 +252,60 @@
                         </div>
                     </div>
 
-                    <div class="ongoing-ttr">
-                        <div class="ongoing-tass">
-                            <h3>Ongoing Task</h3>
-                            <p>2/8</p>
-                        </div>
-                        
-                        <div class="ongoing-list">
-                            <div class="ong-info">
-                                <button><span class="material-icons-round">laptop</span></button>
-                                <div class="ong-text">
-                                    <p>
-                                        interview <br>
-                                        Sep 13, 08:30
-                                    </p>
-                                </div>
-                            </div>
-                            <input type="checkbox"  id="checkbox">
-                        </div>
 
-                        <div class="ongoing-list">
-                            <div class="ong-info">
-                                <button><span class="material-icons-round">laptop</span></button>
-                                <div class="ong-text">
-                                    <p>
-                                        interview <br>
-                                        Sep 13, 08:30
-                                    </p>
-                                </div>
-                            </div>
-                            <input type="checkbox"  id="checkbox">
-                        </div>
+                        <div class="meetings-card">
+                            <div class="header">TODAY’S MEETINGS</div>
 
-                        <div class="ongoing-list">
-                            <div class="ong-info">
-                                <button><span class="material-icons-round">laptop</span></button>
-                                <div class="ong-text">
-                                    <p>
-                                        interview <br>
-                                        Sep 13, 08:30
-                                    </p>
+                            <div class="list">
+
+                                <div class="meeting">
+                                <div class="time">08:30</div>
+                                <div class="info">
+                                    <div class="title">Daily Project Review</div>
+                                    <div class="desc">Team organization</div>
                                 </div>
+                                <img src="images/boy-1.jpg">
+                                </div>
+
+                                <div class="meeting">
+                                <div class="time">09:00</div>
+                                <div class="info">
+                                    <div class="title">Sprint Surge</div>
+                                    <div class="desc">Agile progress</div>
+                                </div>
+                                <div class="group">+9</div>
+                                </div>
+
+                                <div class="meeting">
+                                <div class="time">11:45</div>
+                                <div class="info">
+                                    <div class="title">Project Status</div>
+                                    <div class="desc">Progress update</div>
+                                </div>
+                                <img src="images/girl-1.jpeg">
+                                </div>
+
+                                <div class="meeting">
+                                <div class="time">06:30</div>
+                                <div class="info">
+                                    <div class="title">Team Performance</div>
+                                    <div class="desc">Metrics review</div>
+                                </div>
+                                <div class="group">+9</div>
+                                </div>
+
+                                <div class="meeting">
+                                <div class="time">10:50</div>
+                                <div class="info">
+                                    <div class="title">Stakeholder Feedback</div>
+                                    <div class="desc">Client insights</div>
+                                </div>
+                                <img src="images/pics.jpg">
+                                </div>
+
                             </div>
-                            <input type="checkbox"  id="checkbox">
-                        </div>
+                            </div>
+
 
                     </div>
                 </div>
@@ -265,15 +325,30 @@
                 <div class="cc-plandet">
                     <div class="c-plandet">
                         <h3>Current Plan Detail</h3>
-                        <p>Pro Plan</p>
                     </div>
-                    <button>Upgrade</button>
                 </div>
-                <div class="cuuurrr">
-                    <h2>Premium</h2>
-                    <p>Active</p>
-                    
-                </div>
+
+                <div class="stats-card">
+
+                    <div class="stat">
+                        <div class="stat-title">Subscription Plan</div>
+                        <div class="stat-value">Premium</div>
+                        <button class="btn primary">Upgrade Plan</button>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="stat">
+                        <div class="stat-title">Next Billing Date</div>
+                        <div class="stat-value">Oct 15, 2024</div>
+                        <div class="actions">
+                        <button class="btn soft">View Details</button>
+                        <button class="btn warning">Change Payment</button>
+                        </div>
+                    </div>
+
+                    </div>
+
             </div>
 
 
