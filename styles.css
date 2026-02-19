@@ -1041,7 +1041,7 @@ h3{
     .nav-links nav.show{
         display: flex;
         margin: 0px 7px;
-        margin-right: 270px;
+        margin-right: 200px;
     }
 
     .nav-links nav a{
@@ -1433,3 +1433,4 @@ h3{
     min-width: 0;
     }
 }
+
